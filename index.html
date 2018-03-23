@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,32 @@
 
 <body>
     
+    <div id="computer">
+        <div id ="screen">
+            <div id="top-section">
+                <div id="my-pokemon" class="half-screen">
+                    <p class="screen-title">My Pokemon</p>
+                </div>
+
+                <div id="show-pokemon" class="half-screen">
+                    
+                </div>
+            </div>
+            
+            <div id="bottom-section">
+                
+                <form action="https://pokeapi.co/api/v2/pokemon" method="GET">
+                    <input type="text" placeholder="enter your query">
+                    <input type="submit" value="submit">
+                </form>
+                
+                <div id="search-results">
+                    
+                </div>
+                
+            </div>   
+        </div>
+    </div>
     
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"

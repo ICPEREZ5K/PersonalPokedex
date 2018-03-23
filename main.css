@@ -1,0 +1,38 @@
+#computer{
+    background-color: grey;
+    position: relative;
+    top:50px;
+    left:100px;
+    width: 1050px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#screen{ 
+    background-color: #f4e9d2;
+    margin:1%;
+    border: 5px inset #3f3f3f;
+    border-radius: 10px;
+}
+
+.half-screen{
+    display: inline-block;
+    width: 46%;
+    text-align: center;
+}
+
+#my-pokemon{
+    border-right: 1px solid black;
+    min-height: 150px;
+    overflow: scroll;
+}
+
+#show-pokemon{
+    position: absolute;
+    overflow: scroll;
+}
+
+#search-results{
+    min-height:
+       
+}
