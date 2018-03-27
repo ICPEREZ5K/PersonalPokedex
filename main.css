@@ -23,16 +23,16 @@
 
 #my-pokemon{
     border-right: 1px solid black;
-    min-height: 150px;
+    height: 300px;
     overflow: scroll;
 }
 
 #show-pokemon{
-    position: absolute;
+    height: 200px;
     overflow: scroll;
 }
 
 #search-results{
-    min-height:
-       
+    height: 200px;
+    overflow: scroll;
 }
