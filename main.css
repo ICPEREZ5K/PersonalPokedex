@@ -36,3 +36,7 @@
     height: 200px;
     overflow: scroll;
 }
+
+.active-result{
+    background-color:aquamarine;
+}
