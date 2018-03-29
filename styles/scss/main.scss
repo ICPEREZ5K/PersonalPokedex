@@ -1,0 +1,45 @@
+$overflowTrue: "overflow: scroll";
+$relative: "position: relative";
+$rounded: "border-radius: 10px";
+$standardBorder: 3px solid black;
+
+#computer{
+    background-color: grey;
+    $relative
+    top 50px;
+    left 100px;
+    width 1050px;
+    border $standardBorder;
+    $rounded
+}
+
+#screen{ 
+    background-color: #f4e9d2;
+    margin: 1%;
+    border: 5px inset #3f3f3f;
+    $rounded;
+}
+
+.half-screen{
+    display: inline-block;
+    width: 46%;
+    text-align: center;
+}
+
+#my-pokemon{
+    border-right: $standardBorder;
+    $overflowTrue;
+}
+
+#show-pokemon{
+    $overflowTrue;
+}
+
+#search-results{
+    height: 200px;
+    $overflowTrue;
+}
+
+.active-result{
+    background-color:aquamarine;
+}

@@ -1,11 +1,11 @@
 #computer{
     background-color: grey;
     position: relative;
-    top:50px;
-    left:100px;
+    	top:50px;
+    	left:100px;
     width: 1050px;
     border: 3px solid black;
-    border-radius: 10px;
+   border-radius: 10px;
 }
 
 #screen{ 
@@ -16,25 +16,24 @@
 }
 
 .half-screen{
+    height: 300px;
     display: inline-block;
     width: 46%;
     text-align: center;
 }
 
 #my-pokemon{
-    border-right: 1px solid black;
-    height: 300px;
-    overflow: scroll;
+    border-right: 3px solid black;
+   overflow: scroll;
 }
 
 #show-pokemon{
-    height: 200px;
-    overflow: scroll;
+   overflow: scroll;
 }
 
 #search-results{
     height: 200px;
-    overflow: scroll;
+   overflow: scroll;
 }
 
 .active-result{
