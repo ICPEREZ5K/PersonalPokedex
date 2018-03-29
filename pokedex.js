@@ -4,7 +4,7 @@ let pokemon = {};
 
 function getPokeData(endpoint, done) {
     $.ajax({url: endpoint , success: done});
-    console.log('ajax request(s) sent');
+    console.log('ajax request(s)');
 }
 
 function PokemonObj(sprite, hp, attack, defense, abilities){
@@ -22,7 +22,7 @@ function createPokemon(data){
         data.stats[3].base_stat,
         data.abilities
     )
-    console.log(`one pokemon '${data.name}' added to hash`);
+    console.log(`one pokemon ${data.name} added to hash`);
 };
 
 function showPokemon(identifier){
