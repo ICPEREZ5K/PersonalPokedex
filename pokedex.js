@@ -4,36 +4,49 @@ let pokemon = {};
 
 function getPokeData(endpoint, done) {
     $.ajax({url: endpoint , success: done});
-    console.log('ajax request(s)');
+    console.log('ajax request(s) sent');
 }
 
-function PokemonObj(hp, attack, defense, abilities){
+function PokemonObj(sprite, hp, attack, defense, abilities){
+    this.sprite = sprite;
     this.hp = hp;
     this.attack = attack;
     this.defense = defense;
     this.abilities = abilities;
 }
 function createPokemon(data){ 
-    pokemon[`${data.name}`] = new PokemonObj(  
+    pokemon[`${data.name}`] = new PokemonObj(
+        data.sprites.front_default,
         data.stats[5].base_stat,
         data.stats[4].base_stat,
         data.stats[3].base_stat,
         data.abilities
     )
-    console.log(`one pokemon ${data.name} added to hash`);
+    console.log(`one pokemon '${data.name}' added to hash`);
 };
 
-function show(){
+function showPokemon(identifier){
+    let v = `<p class="pokedata-show"><img src="${pokemon[identifier].sprite}"></p>`;
+    let w = `<p class="pokedata-show">HP: ${pokemon[identifier].hp}</p>`;
+    let x = `<p class="pokedata-show">ATTACK: ${pokemon[identifier].attack}</p>`;
+    let y = `<p class="pokedata-show">DEFENSE: ${pokemon[identifier].defense}</p>`;
+    let z = `<p class="pokedata-show">ABILITIES: ${pokemon[identifier].abilities}</p>`;
     
+    if ($('.pokedata-show').length > 1){ 
+        $('.pokedata-show').remove();
+        $('#show-pokemon').append([v,w,x,y,z])
+    } else {
+        $('#show-pokemon').append([v,w,x,y,z]);
+    }
 }
 
-function checkPokeHash(comparison){
+function checkPokeHash(identifier){
     
-    if(pokemon[`${comparison}`] !== undefined){
-         console.log(pokemon[`${comparison}`]);
+    if(pokemon[`${identifier}`] !== undefined){
+         showPokemon(identifier);
     } else {
-        alert(`Data for ${comparison} could not be found inside the local hash. Press OK to download from https://pokeapi.co`);
-        getPokeData(`https://pokeapi.co/api/v2/pokemon/${comparison}`, createPokemon);
+        alert(`Data for ${identifier} could not be found inside the local hash. Press OK to download from https://pokeapi.co`);
+        getPokeData(`https://pokeapi.co/api/v2/pokemon/${identifier}`, createPokemon);
     } 
 }
 function activate(){
