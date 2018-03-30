@@ -92,7 +92,7 @@ function activate(){
 
 // Checks if content has been loaded before.
 // if so it removes all .results and loads new ones.
-// event listener for activate function is also housed here.
+// event listener (for activate function) is also housed here.
 
 function loadData(data){    
     if($('.search-result').length > 1){        
@@ -111,7 +111,7 @@ function loadData(data){
 }
 
 // Search Offset starts at zero
-// References Offest var and throws it at the end of an api call url param.
+// function reference Offest var and throws it at the end of an api call url param.
 
 function addOffset(){
     getPokeData(`${apiBase}${'?offset='}${searchOffset += 20}`, loadData);
